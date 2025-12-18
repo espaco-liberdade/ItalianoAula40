@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passaporte Italiano - Aula 39</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fcfcfc;
+      color: #333;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      padding: 15px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #008C45 0%, #F4F5F0 50%, #CD212A 100%);
+      color: #333;
+      border: 1px solid #ddd;
+    }
+    h2 {
+      color: #005a2c; /* Verde escuro */
+      border-bottom: 2px solid #CD212A; /* Vermelho */
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    h3 {
+      color: #b21b22; /* Vermelho escuro */
+    }
+    code {
+      background: #eef8f2;
+      padding: 3px 7px;
+      border-radius: 5px;
+      font-size: 0.95em;
+      border: 1px solid #d0e8d9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #008C45; /* Verde */
+      color: white;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f8f8;
+    }
+    /* Estilo atualizado para o botão de áudio */
+    .audio-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3em;
+      color: #CD212A;
+      transition: transform 0.2s;
+      padding: 0;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .audio-button:hover {
+        transform: scale(1.2);
+    }
+    .nota-gramatical, .nota-dica, .bloco-cultural {
+      background: #fdfbeA;
+      border-left: 5px solid #008C45; /* Verde */
+      padding: 15px 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .nota-dica { border-left-color: #CD212A; background: #fff0f1; }
+    .bloco-cultural { border-left-color: #005a2c; background: #eef8f2; }
+    .secao-exercicios {
+      background-color: #f4f9ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+      border: 1px solid #d1e3ff;
+    }
+    .exercise-list li { margin-bottom: 15px; }
+    .pronuncia-guia {
+        font-style: italic;
+        color: #555;
+    }
+    .ipa {
+        font-family: 'Courier New', Courier, monospace;
+        color: #444;
+    }
+    .gabarito-section {
+        background-color: #fff8e1;
+        border: 1px solid #ffecb3;
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📘 Aula 39: "Acho que sim, espero que não..." 🇮🇹<br>(Penso di sì, spero di no...)</h1>
+
+<!-- Introdução -->
+<h2>1. Introdução</h2>
+<p><em>Ciao!</em> Bem-vindo(a) à aula 39. Até agora, falamos de certezas e fatos com o modo Indicativo. Hoje, vamos entrar em um novo universo: o da subjetividade. O tema são as <strong>dúvidas e os desejos</strong>, e para expressá-los, vamos aprender a usar o <strong>Congiuntivo Presente</strong> (Presente do Subjuntivo). Este modo verbal é usado para falar de opiniões, esperanças, medos, dúvidas – tudo o que não é um fato objetivo, mas sim uma percepção pessoal. Dominar o subjuntivo é, talvez, o passo mais importante para alcançar a verdadeira fluência em italiano. <em>Credo che tu sia pronto/a!</em> (Acredito que você esteja pronto/a!)</p>
+
+<!-- Vocabulário -->
+<h2>2. Vocabulário-chave: Dúvidas, Desejos e Emoções</h2>
+<table>
+  <tr>
+    <th>Italiano + Áudio</th>
+    <th>Tradução / Pronúncia</th>
+    <th>Italiano + Áudio</th>
+    <th>Tradução / Pronúncia</th>
+  </tr>
+  <tr>
+    <td><strong>Il dubbio</strong> <button class="audio-button" onclick="playAudio('Il dubbio')">🔊</button></td>
+    <td>A dúvida<br><span class="ipa">/il ˈdub.bjo/</span><br><span class="pronuncia-guia">(Il DÚB-bio)</span></td>
+    <td><strong>La possibilità</strong> <button class="audio-button" onclick="playAudio('La possibilità')">🔊</button></td>
+    <td>A possibilidade<br><span class="ipa">/la pos.si.bi.liˈta/</span><br><span class="pronuncia-guia">(La pos-si-bi-li-TÁ)</span></td>
+  </tr>
+  <tr>
+    <td><strong>La speranza</strong> <button class="audio-button" onclick="playAudio('La speranza')">🔊</button></td>
+    <td>A esperança<br><span class="ipa">/la speˈran.tsa/</span><br><span class="pronuncia-guia">(La spe-RÁN-tsa)</span></td>
+    <td><strong>L'incertezza</strong> <button class="audio-button" onclick="playAudio('L\'incertezza')">🔊</button></td>
+    <td>A incerteza<br><span class="ipa">/lin.tʃerˈtet.tsa/</span><br><span class="pronuncia-guia">(Lin-tcher-TÉT-tsa)</span></td>
+  </tr>
+  <tr>
+    <td><strong>Il desiderio</strong> <button class="audio-button" onclick="playAudio('Il desiderio')">🔊</button></td>
+    <td>O desejo<br><span class="ipa">/il de.ziˈdɛ.rjo/</span><br><span class="pronuncia-guia">(Il de-zi-DÉ-rio)</span></td>
+    <td><strong>La necessità</strong> <button class="audio-button" onclick="playAudio('La necessità')">🔊</button></td>
+    <td>A necessidade<br><span class="ipa">/la ne.tʃes.siˈta/</span><br><span class="pronuncia-guia">(La ne-tches-si-TÁ)</span></td>
+  </tr>
+    <tr>
+    <td><strong>La paura</strong> <button class="audio-button" onclick="playAudio('La paura')">🔊</button></td>
+    <td>O medo<br><span class="ipa">/la paˈu.ra/</span><br><span class="pronuncia-guia">(La pa-Ú-ra)</span></td>
+    <td><strong>L'emozione</strong> <button class="audio-button" onclick="playAudio('L\'emozione')">🔊</button></td>
+    <td>A emoção<br><span class="ipa">/le.motˈtsjo.ne/</span><br><span class="pronuncia-guia">(Le-mo-TSIÔ-ne)</span></td>
+  </tr>
+  <tr>
+    <td><strong>Credere</strong> <button class="audio-button" onclick="playAudio('Credere')">🔊</button></td>
+    <td>Acreditar<br><span class="ipa">/ˈkre.de.re/</span><br><span class="pronuncia-guia">(CRÊ-de-re)</span></td>
+    <td><strong>Immaginare</strong> <button class="audio-button" onclick="playAudio('Immaginare')">🔊</button></td>
+    <td>Imaginar<br><span class="ipa">/im.ma.dʒiˈna.re/</span><br><span class="pronuncia-guia">(Im-ma-dji-NÁ-re)</span></td>
+  </tr>
+   <tr>
+    <td><strong>Pensare</strong> <button class="audio-button" onclick="playAudio('Pensare')">🔊</button></td>
+    <td>Pensar<br><span class="ipa">/penˈsa.re/</span><br><span class="pronuncia-guia">(Pen-SÁ-re)</span></td>
+    <td><strong>Supporre</strong> <button class="audio-button" onclick="playAudio('Supporre')">🔊</button></td>
+    <td>Supor<br><span class="ipa">/supˈpor.re/</span><br><span class="pronuncia-guia">(Sup-PÓR-re)</span></td>
+  </tr>
+   <tr>
+    <td><strong>Sperare</strong> <button class="audio-button" onclick="playAudio('Sperare')">🔊</button></td>
+    <td>Esperar (ter esperança)<br><span class="ipa">/speˈra.re/</span><br><span class="pronuncia-guia">(Spe-RÁ-re)</span></td>
+    <td><strong>Temere</strong> <button class="audio-button" onclick="playAudio('Temere')">🔊</button></td>
+    <td>Temer, Recear<br><span class="ipa">/teˈme.re/</span><br><span class="pronuncia-guia">(Te-MÊ-re)</span></td>
+  </tr>
+   <tr>
+    <td><strong>Volere</strong> <button class="audio-button" onclick="playAudio('Volere')">🔊</button></td>
+    <td>Querer<br><span class="ipa">/voˈle.re/</span><br><span class="pronuncia-guia">(Vo-LÊ-re)</span></td>
+    <td><strong>Dubitare</strong> <button class="audio-button" onclick="playAudio('Dubitare')">🔊</button></td>
+    <td>Duvidar<br><span class="ipa">/du.biˈta.re/</span><br><span class="pronuncia-guia">(Du-bi-TÁ-re)</span></td>
+  </tr>
+    <tr>
+    <td><strong>Sembrare</strong> <button class="audio-button" onclick="playAudio('Sembrare')">🔊</button></td>
+    <td>Parecer<br><span class="ipa">/semˈbra.re/</span><br><span class="pronuncia-guia">(Sem-BRÁ-re)</span></td>
+    <td><strong>Lieto/a</strong> <button class="audio-button" onclick="playAudio('Lieto')">🔊</button></td>
+    <td>Feliz, Contente<br><span class="ipa">/ˈljɛ.to/</span><br><span class="pronuncia-guia">(LIÉ-to)</span></td>
+  </tr>
+    <tr>
+    <td><strong>È possibile che...</strong> <button class="audio-button" onclick="playAudio('È possibile che')">🔊</button></td>
+    <td>É possível que...<br><span class="ipa">/ɛ posˈsi.bi.le ke/</span><br><span class="pronuncia-guia">(É pos-SÍ-bi-le ke)</span></td>
+    <td><strong>È importante che...</strong> <button class="audio-button" onclick="playAudio('È importante che')">🔊</button></td>
+    <td>É importante que...<br><span class="ipa">/ɛ im.porˈtan.te ke/</span><br><span class="pronuncia-guia">(É im-por-TÁN-te ke)</span></td>
+  </tr>
+</table>
+
+<!-- Gramática Essencial -->
+<h2>3. Gramática Essencial</h2>
+<div class="nota-gramatical">
+  <h4>💡 Il Congiuntivo Presente</h4>
+  <p>O subjuntivo (<em>congiuntivo</em>) é o modo da subjetividade. Enquanto o indicativo descreve a realidade e os fatos, o subjuntivo descreve o mundo das opiniões, dúvidas, desejos, medos e emoções. Ele é quase sempre introduzido pela palavra <strong>che</strong>.</p>
+  
+  <h4>Quando Usar o Congiuntivo?</h4>
+  <p>Use o subjuntivo depois de verbos ou expressões que indicam:</p>
+   <table>
+    <tr><th>Categoria</th><th>Verbos / Expressões</th><th>Exemplo</th></tr>
+    <tr>
+        <td><strong>Opinião / Dúvida</strong></td>
+        <td>pensare che, credere che, immaginare che, supporre che, dubitare che, mi sembra che...</td>
+        <td><strong>Penso che</strong> tu <u>abbia</u> ragione.</td>
+    </tr>
+    <tr>
+        <td><strong>Desejo / Vontade / Esperança</strong></td>
+        <td>volere che, sperare che, desiderare che, preferire che...</td>
+        <td><strong>Spero che</strong> il tempo <u>sia</u> bello domani.</td>
+    </tr>
+    <tr>
+        <td><strong>Emoção / Sentimento</strong></td>
+        <td>essere felice che, avere paura che, mi dispiace che...</td>
+        <td><strong>Sono felice che</strong> tu <u>venga</u> alla festa.</td>
+    </tr>
+    <tr>
+        <td><strong>Expressões Impessoais</strong></td>
+        <td>è importante che, è necessario che, è possibile che, bisogna che...</td>
+        <td><strong>È necessario che</strong> tu <u>studi</u> di più.</td>
+    </tr>
+  </table>
+  <p><strong>Regra de Ouro:</strong> Se a frase principal expressa certeza (ex: <em>So che...</em> - Eu sei que...), usa-se o indicativo. Se expressa subjetividade, usa-se o subjuntivo.</p>
+
+  <h4>Como Formar o Congiuntivo Presente Regular</h4>
+  <p>A conjugação tem uma característica marcante: as três pessoas do singular (<strong>io, tu, lui/lei</strong>) são <strong>idênticas</strong>! Por isso, o uso do pronome sujeito é mais comum para evitar ambiguidades.</p>
+    <table>
+        <tr><th>Pessoa</th><th>-ARE (parlare)</th><th>-ERE (prendere)</th><th>-IRE (dormire / finire)</th></tr>
+        <tr><td>che io</td><td>parl<strong>i</strong></td><td>prend<strong>a</strong></td><td>dorm<strong>a</strong> / finisc<strong>a</strong></td></tr>
+        <tr><td>che tu</td><td>parl<strong>i</strong></td><td>prend<strong>a</strong></td><td>dorm<strong>a</strong> / finisc<strong>a</strong></td></tr>
+        <tr><td>che lui/lei</td><td>parl<strong>i</strong></td><td>prend<strong>a</strong></td><td>dorm<strong>a</strong> / finisc<strong>a</strong></td></tr>
+        <tr><td>che noi</td><td>parl<strong>iamo</strong></td><td>prend<strong>iamo</strong></td><td>dorm<strong>iamo</strong> / fin<strong>iamo</strong></td></tr>
+        <tr><td>che voi</td><td>parl<strong>iate</strong></td><td>prend<strong>iate</strong></td><td>dorm<strong>iate</strong> / fin<strong>iate</strong></td></tr>
+        <tr><td>che loro</td><td>parl<strong>ino</strong></td><td>prend<strong>ano</strong></td><td>dorm<strong>ano</strong> / finisc<strong>ano</strong></td></tr>
+    </table>
+
+    <h4>Verbos Irregulares Mais Comuns no Congiuntivo Presente</h4>
+     <table>
+        <tr><th>Pessoa</th><th>ESSERE + 🔊</th><th>AVERE + 🔊</th><th>ANDARE + 🔊</th><th>FARE + 🔊</th><th>STARE + 🔊</th></tr>
+        <tr><td>io/tu/lui</td><td><strong>sia</strong> <button class="audio-button" onclick="playAudio('sia')">🔊</button></td><td><strong>abbia</strong> <button class="audio-button" onclick="playAudio('abbia')">🔊</button></td><td><strong>vada</strong> <button class="audio-button" onclick="playAudio('vada')">🔊</button></td><td><strong>faccia</strong> <button class="audio-button" onclick="playAudio('faccia')">🔊</button></td><td><strong>stia</strong> <button class="audio-button" onclick="playAudio('stia')">🔊</button></td></tr>
+        <tr><td>noi</td><td><strong>siamo</strong></td><td><strong>abbiamo</strong></td><td><strong>andiamo</strong></td><td><strong>facciamo</strong></td><td><strong>stiamo</strong></td></tr>
+        <tr><td>voi</td><td><strong>siate</strong></td><td><strong>abbiate</strong></td><td><strong>andiate</strong></td><td><strong>facciate</strong></td><td><strong>stiate</strong></td></tr>
+        <tr><td>loro</td><td><strong>siano</strong></td><td><strong>abbiano</strong></td><td><strong>vadano</strong></td><td><strong>facciano</strong></td><td><strong>stiano</strong></td></tr>
+    </table>
+</div>
+
+<!-- Frases Essenciais -->
+<h2>4. Frases Essenciais para o Dia a Dia</h2>
+<table>
+    <tr><th>Italiano + Áudio</th><th>Pronúncia (IPA / Simplificada)</th><th>Tradução</th></tr>
+    <tr><td>1. Penso che questo film sia molto interessante. <button class="audio-button" onclick="playAudio('Penso che questo film sia molto interessante.')">🔊</button></td><td><span class="ipa">/ˈpɛn.so ke ˈkwe.sto ˈfilm ˈsi.a ˈmol.to in.te.resˈsan.te/</span><br><span class="pronuncia-guia">(PÊN-so ke QUÊS-to film SÍ-a MÓL-to in-te-res-SÁN-te)</span></td><td>Penso que este filme seja muito interessante.</td></tr>
+    <tr><td>2. Credo che tu abbia ragione. <button class="audio-button" onclick="playAudio('Credo che tu abbia ragione.')">🔊</button></td><td><span class="ipa">/ˈkre.do ke tu ˈab.bja raˈdʒo.ne/</span><br><span class="pronuncia-guia">(CRÊ-do ke tu ÁB-bia ra-DJÔ-ne)</span></td><td>Acredito que você tenha razão.</td></tr>
+    <tr><td>3. Spero che domani ci sia il sole. <button class="audio-button" onclick="playAudio('Spero che domani ci sia il sole.')">🔊</button></td><td><span class="ipa">/ˈspɛ.ro ke doˈma.ni tʃi ˈsi.a il ˈso.le/</span><br><span class="pronuncia-guia">(SPÉ-ro ke do-MÁ-ni tchi SÍ-a il SÔ-le)</span></td><td>Espero que amanhã faça (haja) sol.</td></tr>
+    <tr><td>4. Voglio che tu venga alla mia festa. <button class="audio-button" onclick="playAudio('Voglio che tu venga alla mia festa.')">🔊</button></td><td><span class="ipa">/ˈvɔʎ.ʎo ke tu ˈvɛŋ.ɡa ˈal.la ˈmi.a ˈfɛ.sta/</span><br><span class="pronuncia-guia">(VÓ-lho ke tu VÊN-ga ÁL-la MÍ-a FÉS-ta)</span></td><td>Quero que você venha à minha festa.</td></tr>
+    <tr><td>5. È importante che voi studiate ogni giorno. <button class="audio-button" onclick="playAudio('È importante che voi studiate ogni giorno.')">🔊</button></td><td><span class="ipa">/ɛ im.porˈtan.te ke voi stuˈdja.te ˈoɲ.ɲi ˈdʒor.no/</span><br><span class="pronuncia-guia">(É im-por-TÁN-te ke vói stu-DIÁ-te Ô-nhi DJÓR-no)</span></td><td>É importante que vocês estudem todo dia.</td></tr>
+    <tr><td>6. Mi sembra che lui non dica la verità. <button class="audio-button" onclick="playAudio('Mi sembra che lui non dica la verità.')">🔊</button></td><td><span class="ipa">/mi ˈsem.bra ke ˈlu.i non ˈdi.ka la ve.riˈta/</span><br><span class="pronuncia-guia">(Mi SÊM-bra ke LÚ-i non DÍ-ca la ve-ri-TÁ)</span></td><td>Me parece que ele não diz a verdade.</td></tr>
+    <tr><td>7. Dubito che loro sappiano la risposta. <button class="audio-button" onclick="playAudio('Dubito che loro sappiano la risposta.')">🔊</button></td><td><span class="ipa">/ˈdu.bi.to ke ˈlo.ro ˈsap.pja.no la riˈspo.sta/</span><br><span class="pronuncia-guia">(DÚ-bi-to ke LÔ-ro SÁP-pia-no la ris-PÔS-ta)</span></td><td>Duvido que eles saibam a resposta.</td></tr>
+    <tr><td>8. Sono felice che tu stia bene. <button class="audio-button" onclick="playAudio('Sono felice che tu stia bene.')">🔊</button></td><td><span class="ipa">/ˈso.no feˈli.tʃe ke tu ˈsti.a ˈbɛ.ne/</span><br><span class="pronuncia-guia">(SÔ-no fe-LÍ-tche ke tu STÍ-a BÉ-ne)</span></td><td>Estou feliz que você esteja bem.</td></tr>
+    <tr><td>9. Ho paura che sia troppo tardi. <button class="audio-button" onclick="playAudio('Ho paura che sia troppo tardi.')">🔊</button></td><td><span class="ipa">/ɔ paˈu.ra ke ˈsi.a ˈtrɔp.po ˈtar.di/</span><br><span class="pronuncia-guia">(Ó pa-Ú-ra ke SÍ-a TRÓP-po TÁR-di)</span></td><td>Tenho medo de que seja tarde demais.</td></tr>
+    <tr><td>10. È necessario che noi parliamo. <button class="audio-button" onclick="playAudio('È necessario che noi parliamo.')">🔊</button></td><td><span class="ipa">/ɛ ne.tʃesˈsa.rjo ke noi parˈlja.mo/</span><br><span class="pronuncia-guia">(É ne-tches-SÁ-rio ke nói par-LIÁ-mo)</span></td><td>É necessário que nós conversemos.</td></tr>
+    <tr><td>11. Voglio un mondo in cui tutti siano liberi. <button class="audio-button" onclick="playAudio('Voglio un mondo in cui tutti siano liberi.')">🔊</button></td><td><span class="ipa">/ˈvɔʎ.ʎo um ˈmon.do in kui ˈtut.ti ˈsi.a.no ˈli.be.ri/</span><br><span class="pronuncia-guia">(VÓ-lho um MÔN-do in cúi TÚT-ti SÍ-a-no LÍ-be-ri)</span></td><td>Quero um mundo em que todos sejam livres.</td></tr>
+    <tr><td>12. Mi dispiace che tu non possa venire. <button class="audio-button" onclick="playAudio('Mi dispiace che tu non possa venire.')">🔊</button></td><td><span class="ipa">/mi diˈspja.tʃe ke tu nom ˈpɔs.sa veˈni.re/</span><br><span class="pronuncia-guia">(Mi dis-PIÁ-tche ke tu nom PÓS-sa ve-NÍ-re)</span></td><td>Sinto muito que você não possa vir.</td></tr>
+    <tr><td>13. È possibile che lui non sappia niente. <button class="audio-button" onclick="playAudio('È possibile che lui non sappia niente.')">🔊</button></td><td><span class="ipa">/ɛ posˈsi.bi.le ke ˈlu.i non ˈsap.pja ˈnjɛn.te/</span><br><span class="pronuncia-guia">(É pos-SÍ-bi-le ke LÚ-i non SÁP-pia NIÊN-te)</span></td><td>É possível que ele не saiba de nada.</td></tr>
+    <tr><td>14. Bisogna che voi facciate più attenzione. <button class="audio-button" onclick="playAudio('Bisogna che voi facciate più attenzione.')">🔊</button></td><td><span class="ipa">/biˈzoɲ.ɲa ke voi fatˈtʃa.te ˈpju at.tenˈtsjo.ne/</span><br><span class="pronuncia-guia">(Bi-ZÔ-nha ke vói fa-TCHÁ-te piú at-ten-TSIÔ-ne)</span></td><td>É preciso que vocês prestem mais atenção.</td></tr>
+    <tr><td>15. Preferisco che tu me lo dica adesso. <button class="audio-button" onclick="playAudio('Preferisco che tu me lo dica adesso.')">🔊</button></td><td><span class="ipa">/pre.feˈri.sko ke tu me lo ˈdi.ka aˈdɛs.so/</span><br><span class="pronuncia-guia">(Pre-fe-RÍS-co ke tu me lo DÍ-ca a-DÉS-so)</span></td><td>Prefiro que você me diga isso agora.</td></tr>
+    <tr><td>16. Spero che tu capisca la mia situazione. <button class="audio-button" onclick="playAudio('Spero che tu capisca la mia situazione.')">🔊</button></td><td><span class="ipa">/ˈspɛ.ro ke tu kaˈpi.ska la ˈmi.a si.twatˈtsjo.ne/</span><br><span class="pronuncia-guia">(SPÉ-ro ke tu ca-PÍS-ca la MÍ-a si-tua-TSIÔ-ne)</span></td><td>Espero que você entenda minha situação.</td></tr>
+    <tr><td>17. Mi auguro che tutto vada bene. <button class="audio-button" onclick="playAudio('Mi auguro che tutto vada bene.')">🔊</button></td><td><span class="ipa">/mi auˈɡu.ro ke ˈtut.to ˈva.da ˈbɛ.ne/</span><br><span class="pronuncia-guia">(Mi au-GÚ-ro ke TÚT-to VÁ-da BÉ-ne)</span></td><td>Desejo que tudo corra bem.</td></tr>
+    <tr><td>18. Immagino che tu sia stanco dopo il viaggio. <button class="audio-button" onclick="playAudio('Immagino che tu sia stanco dopo il viaggio.')">🔊</button></td><td><span class="ipa">/imˈma.dʒi.no ke tu ˈsi.a ˈstaŋ.ko ˈdɔ.po il ˈvjad.dʒo/</span><br><span class="pronuncia-guia">(Im-MÁ-dji-no ke tu SÍ-a STÁN-co DÔ-po il VIÁ-djo)</span></td><td>Imagino que você esteja cansado depois da viagem.</td></tr>
+    <tr><td>19. È strano che non mi abbia ancora chiamato. <button class="audio-button" onclick="playAudio('È strano che non mi abbia ancora chiamato.')">🔊</button></td><td><span class="ipa">/ɛ ˈstra.no ke nom mi ˈab.bja anˈko.ra kjaˈma.to/</span><br><span class="pronuncia-guia">(É STRÁ-no ke nom mi ÁB-bia an-CÔ-ra kia-MÁ-to)</span></td><td>É estranho que ele/ela não tenha me ligado ainda.</td></tr>
+    <tr><td>20. Temo che non ci sia più niente da fare. <button class="audio-button" onclick="playAudio('Temo che non ci sia più niente da fare.')">🔊</button></td><td><span class="ipa">/ˈtɛ.mo ke non tʃi ˈsi.a ˈpju ˈnjɛn.te da ˈfa.re/</span><br><span class="pronuncia-guia">(TÉ-mo ke non tchi SÍ-a piú NIÊN-te da FÁ-re)</span></td><td>Temo que não haja mais nada a fazer.</td></tr>
+    <tr><td>21. È un peccato che tu debba partire così presto. <button class="audio-button" onclick="playAudio('È un peccato che tu debba partire così presto.')">🔊</button></td><td><span class="ipa">/ɛ um pekˈka.to ke tu ˈdeb.ba parˈti.re koˈsi ˈprɛ.sto/</span><br><span class="pronuncia-guia">(É um pek-KÁ-to ke tu DÉB-ba par-TÍ-re co-ZÍ PRÉS-to)</span></td><td>É uma pena que você tenha que partir tão cedo.</td></tr>
+    <tr><td>22. Nonostante sia difficile, voglio provarci. <button class="audio-button" onclick="playAudio('Nonostante sia difficile, voglio provarci.')">🔊</button></td><td><span class="ipa">/no.noˈstan.te ˈsi.a difˈfi.tʃi.le ˈvɔʎ.ʎo proˈvar.tʃi/</span><br><span class="pronuncia-guia">(No-nos-TÁN-te SÍ-a dif-FÍ-tchi-le, VÓ-lho pro-VÁR-tchi)</span></td><td>Apesar de ser difícil, quero tentar.</td></tr>
+    <tr><td>23. Cerco qualcuno che mi possa aiutare. <button class="audio-button" onclick="playAudio('Cerco qualcuno che mi possa aiutare.')">🔊</button></td><td><span class="ipa">/ˈtʃer.ko kwalˈku.no ke mi ˈpɔs.sa a.juˈta.re/</span><br><span class="pronuncia-guia">(TCHÉR-co qual-CÚ-no ke mi PÓS-sa a-iu-TÁ-re)</span></td><td>Procuro alguém que possa me ajudar.</td></tr>
+    <tr><td>24. È l'unico amico che io abbia qui. <button class="audio-button" onclick="playAudio('È l\'unico amico che io abbia qui.')">🔊</button></td><td><span class="ipa">/ɛ ˈlu.ni.ko aˈmi.ko ke ˈi.o ˈab.bja kwi/</span><br><span class="pronuncia-guia">(É LÚ-ni-co a-MÍ-co ke Í-o ÁB-bia cuí)</span></td><td>É o único amigo que eu tenho aqui.</td></tr>
+    <tr><td>25. Si dice che quella sia la casa più antica della città. <button class="audio-button" onclick="playAudio('Si dice che quella sia la casa più antica della città.')">🔊</button></td><td><span class="ipa">/si ˈdi.tʃe ke ˈkwel.la ˈsi.a la ˈka.za ˈpju anˈti.ka ˈdel.la tʃitˈta/</span><br><span class="pronuncia-guia">(Si DÍ-tche ke QUÉL-la SÍ-a la KÁ-za piú an-TÍ-ca DÉL-la tchi-TÁ)</span></td><td>Diz-se que aquela é a casa mais antiga da cidade.</td></tr>
+    <tr><td>26. Immagino che voi siate stanchi dopo il viaggio. <button class="audio-button" onclick="playAudio('Immagino che voi siate stanchi dopo il viaggio.')">🔊</button></td><td><span class="ipa">/imˈma.dʒi.no ke voi ˈsja.te ˈstaŋ.ki ˈdɔ.po il ˈvjad.dʒo/</span><br><span class="pronuncia-guia">(Im-MÁ-dji-no ke vói SIÁ-te STÁN-qui DÔ-po il VIÁ-djo)</span></td><td>Imagino que vocês estejam cansados depois da viagem.</td></tr>
+    <tr><td>27. È probabile che loro non vengano. <button class="audio-button" onclick="playAudio('È probabile che loro non vengano.')">🔊</button></td><td><span class="ipa">/ɛ proˈba.bi.le ke ˈlo.ro non ˈvɛŋ.ɡa.no/</span><br><span class="pronuncia-guia">(É pro-BÁ-bi-le ke LÔ-ro non VÊN-ga-no)</span></td><td>É provável que eles não venham.</td></tr>
+    <tr><td>28. Qualunque cosa tu faccia, io ti sosterrò. <button class="audio-button" onclick="playAudio('Qualunque cosa tu faccia, io ti sosterrò.')">🔊</button></td><td><span class="ipa">/kwaˈluŋ.kwe ˈkɔ.za tu ˈfat.tʃa ˈi.o ti so.sterˈrɔ/</span><br><span class="pronuncia-guia">(Qua-LÚN-que CÓ-za tu FÁ-tcha, Í-o ti sos-ter-RÓ)</span></td><td>Qualquer coisa que você faça, eu te apoiarei.</td></tr>
+    <tr><td>29. Spero che a Marco piaccia il nostro regalo. <button class="audio-button" onclick="playAudio('Spero che a Marco piaccia il nostro regalo.')">🔊</button></td><td><span class="ipa">/ˈspɛ.ro ke a ˈmar.ko ˈpjat.tʃa il ˈnɔ.stro reˈɡa.lo/</span><br><span class="pronuncia-guia">(SPÉ-ro ke a MÁR-co PIÁ-tcha il NÓS-tro re-GÁ-lo)</span></td><td>Espero que o Marco goste do nosso presente.</td></tr>
+    <tr><td>30. È meglio che tu gli parli. <button class="audio-button" onclick="playAudio('È meglio che tu gli parli.')">🔊</button></td><td><span class="ipa">/ɛ ˈmɛʎ.ʎo ke tu ʎi ˈpar.li/</span><br><span class="pronuncia-guia">(É MÉ-lho ke tu lhi PÁR-li)</span></td><td>É melhor que você fale com ele.</td></tr>
+    <tr><td>31. È il film più bello che io abbia mai visto. <button class="audio-button" onclick="playAudio('È il film più bello che io abbia mai visto.')">🔊</button></td><td><span class="ipa">/ɛ il ˈfilm ˈpju ˈbɛl.lo ke ˈi.o ˈab.bja ˈmai ˈvi.sto/</span><br><span class="pronuncia-guia">(É il film piú BÉL-lo ke Í-o ÁB-bia mái VÍS-to)</span></td><td>É o filme mais bonito que eu já vi.</td></tr>
+    <tr><td>32. Non credo che ci sia una soluzione facile. <button class="audio-button" onclick="playAudio('Non credo che ci sia una soluzione facile.')">🔊</button></td><td><span class="ipa">/non ˈkre.do ke tʃi ˈsi.a ˈu.na so.lutˈtsjo.ne ˈfa.tʃi.le/</span><br><span class="pronuncia-guia">(Non CRÊ-do ke tchi SÍ-a Ú-na so-lu-TSIÔ-ne FÁ-tchi-le)</span></td><td>Não acredito que haja uma solução fácil.</td></tr>
+    <tr><td>33. Voglio che voi mi ascoltiate attentamente. <button class="audio-button" onclick="playAudio('Voglio che voi mi ascoltiate attentamente.')">🔊</button></td><td><span class="ipa">/ˈvɔʎ.ʎo ke voi mi a.skolˈtja.te at.tɛn.taˈmen.te/</span><br><span class="pronuncia-guia">(VÓ-lho ke vói mi as-col-TIÁ-te at-ten-ta-MÊN-te)</span></td><td>Quero que vocês me escutem atentamente.</td></tr>
+    <tr><td>34. È normale che un bambino faccia i capricci. <button class="audio-button" onclick="playAudio('È normale che un bambino faccia i capricci.')">🔊</button></td><td><span class="ipa">/ɛ norˈma.le ke um bamˈbi.no ˈfat.tʃa i kaˈprit.tʃi/</span><br><span class="pronuncia-guia">(É nor-MÁ-le ke um bam-BÍ-no FÁ-tcha i ca-PRÍT-chi)</span></td><td>É normal que uma criança faça birra.</td></tr>
+    <tr><td>35. Desidero che tu sia felice. <button class="audio-button" onclick="playAudio('Desidero che tu sia felice.')">🔊</button></td><td><span class="ipa">/deˈzi.de.ro ke tu ˈsi.a feˈli.tʃe/</span><br><span class="pronuncia-guia">(De-ZÍ-de-ro ke tu SÍ-a fe-LÍ-tche)</span></td><td>Desejo que você seja feliz.</td></tr>
+    <tr><td>36. Sembra che stia per piovere. <button class="audio-button" onclick="playAudio('Sembra che stia per piovere.')">🔊</button></td><td><span class="ipa">/ˈsem.bra ke ˈsti.a per ˈpjɔ.ve.re/</span><br><span class="pronuncia-guia">(SÊM-bra ke STÍ-a per PIÓ-ve-re)</span></td><td>Parece que vai chover.</td></tr>
+    <tr><td>37. Benché sia tardi, non ho sonno. <button class="audio-button" onclick="playAudio('Benché sia tardi, non ho sonno.')">🔊</button></td><td><span class="ipa">/beŋˈke ˈsi.a ˈtar.di non ɔ ˈsɔn.no/</span><br><span class="pronuncia-guia">(Ben-KÉ SÍ-a TÁR-di, non ó SÓN-no)</span></td><td>Embora seja tarde, não estou com sono.</td></tr>
+    <tr><td>38. È giusto che tutti abbiano le stesse opportunità. <button class="audio-button" onclick="playAudio('È giusto che tutti abbiano le stesse opportunità.')">🔊</button></td><td><span class="ipa">/ɛ ˈdʒu.sto ke ˈtut.ti ˈab.bja.no le ˈstes.se op.por.tu.niˈta/</span><br><span class="pronuncia-guia">(É DJÚS-to ke TÚT-ti ÁB-bia-no le STÉS-se op-por-tu-ni-TÁ)</span></td><td>É justo que todos tenham as mesmas oportunidades.</td></tr>
+    <tr><td>39. Suppongo che tu sappia cosa stai facendo. <button class="audio-button" onclick="playAudio('Suppongo che tu sappia cosa stai facendo.')">🔊</button></td><td><span class="ipa">/supˈpoŋ.ɡo ke tu ˈsap.pja ˈkɔ.za stai faˈtʃɛn.do/</span><br><span class="pronuncia-guia">(Sup-PÔN-go ke tu SÁP-pia CÓ-za stái fa-TCHÊN-do)</span></td><td>Suponho que você saiba o que está fazendo.</td></tr>
+    <tr><td>40. Bisogna che andiamo, altrimenti perdiamo il treno. <button class="audio-button" onclick="playAudio('Bisogna che andiamo, altrimenti perdiamo il treno.')">🔊</button></td><td><span class="ipa">/biˈzoɲ.ɲa ke anˈdja.mo al.triˈmen.ti perˈdja.mo il ˈtrɛ.no/</span><br><span class="pronuncia-guia">(Bi-ZÔ-nha ke an-DIÁ-mo, al-tri-MÊN-ti per-DIÁ-mo il TRÉ-no)</span></td><td>É preciso que a gente vá, caso contrário perderemos o trem.</td></tr>
+</table>
+
+<!-- Texto para Análise -->
+<h2>5. Texto para Análise: Il Desiderio di Tornare</h2>
+<p><strong>Leitura em Italiano:</strong></p>
+<p>
+Cara Anna,
+<br>
+ti scrivo dal Brasile. Sono qui da quasi un anno e penso spesso all'Italia. Spero che tu stia bene e che tutta la tua famiglia stia in salute. Credo che non passerà molto tempo prima che io torni a trovarvi. Mi manca tutto del nostro paese. Mi sembra che lì il tempo scorra in modo diverso, più lentamente. Ho paura che, quando tornerò, molte cose siano cambiate, ma spero che i nostri posti preferiti siano sempre gli stessi. È importante che tu mi scriva e mi racconti le novità. Voglio che tu sappia che, nonostante la distanza, vi penso sempre. Spero di rivederti presto.
+<br>
+Un abbraccio,
+<br>
+Marco
+</p>
+<p><strong>Pergunta:</strong> Qual é um dos principais desejos de Marco expressos na carta?</p>
+<ol type="A">
+  <li>Vuole che Anna lo vada a trovare in Brasile.</li>
+  <li>Spera di tornare presto in Italia per rivedere i suoi amici.</li>
+  <li>Pensa che l'Italia sia cambiata troppo e non vuole più tornare.</li>
+</ol>
+
+<!-- Exercícios -->
+<h2>6. Exercícios de Fixação 📝</h2>
+<div class="secao-exercicios">
+  <h4>Exercícios</h4>
+  <ol class="exercise-list">
+    <li>Complete a frase com o verbo no Congiuntivo Presente: "Penso che tu (avere) _________ ragione."</li>
+    <li>Escolha a forma correta: "Spero che domani (fa / faccia) bel tempo."</li>
+    <li>Complete a frase: "È necessario che voi (capire) _________ la lezione."</li>
+    <li>Traduza para o italiano: "Acredito que eles sejam felizes."</li>
+    <li>Complete com o verbo no Congiuntivo Presente: "Voglio che tu mi (dire) _________ la verità."</li>
+    <li>Escolha a forma correta: "Mi sembra che lui (è / sia) un po' stanco."</li>
+    <li>Traduza para o italiano: "Tenho medo de que seja tarde demais."</li>
+    <li>Complete a frase: "Bisogna che noi (partire) _________ subito."</li>
+    <li>Escolha a forma correta: "Dubito che loro (vengono / vengano) alla festa."</li>
+    <li>Traduza para o italiano: "É importante que vocês falem com ele."</li>
+  </ol>
+</div>
+
+<!-- Pronúncia -->
+<h2>8. Pronúncia e Repetição 🔉</h2>
+<div class="nota-dica">
+  <h4>Dica de Pronúncia: As Consoantes `SC` vs `SG`</h4>
+  <p>A diferença entre `sc` e `sg` antes de `e` e `i` é a mesma que vimos para `c`/`g` e `p`/`b`: a ausência ou presença de vibração nas cordas vocais.</p>
+  <ul>
+    <li><strong>SC (+e, i):</strong> O som é "surdo", como o nosso "x" em "peixe" ou "sh" em "show". Não há vibração.
+      <ul>
+        <li>Ex: pe<strong>sc</strong>e (PÊ-she - peixe), u<strong>sc</strong>ire (u-SHÍ-re - sair), <strong>sc</strong>ena (SHÊ-na - cena).</li>
+      </ul>
+    </li>
+    <li><strong>SG (+e, i):</strong> O som é "sonoro", como o "j" em "garagem" ou o "s" em "tesouro". A garganta vibra.
+      <ul>
+        <li>Ex: questo non è un suono comune in italiano, ma serve per capire la differenza teorica. A lógica se aplica mais a `s` vs `z`.</li>
+      </ul>
+    </li>
+  </ul>
+   <p>A distinção mais importante para praticar é a do `S` sonoro vs `S` surdo. Compare `chiese` (/ˈkjɛ.ze/ - ele pediu) com `cresce` (/ˈkreʃ.ʃe/ - cresce).</p>
+</div>
+
+<!-- Expressões culturais -->
+<h2>9. Expressões Culturais 🇮🇹</h2>
+<div class="bloco-cultural">
+  <h4>"Speriamo bene!"</h4>
+  <p>Uma das expressões mais onipresentes na fala cotidiana italiana é <strong>"Speriamo bene!"</strong> (literalmente, "Esperemos bem!"). É o equivalente do nosso "Tomara que dê tudo certo!". Ela é usada em qualquer situação de incerteza, grande ou pequena, para expressar uma esperança coletiva de que as coisas terminem bem. "Come andrà l'esame?" "Eh, speriamo bene!". "Pensi che troveremo parcheggio?" "Speriamo bene!". Esta pequena frase encapsula uma mistura de otimismo e realismo que é muito típica da mentalidade italiana. Usá-la em conversas mostra que você não apenas domina a língua, mas também entende o espírito cultural.</p>
+</div>
+
+<!-- Resumo -->
+<h2>10. Resumo da Aula 📑</h2>
+<ul>
+  <li>O <strong>Congiuntivo Presente</strong> é o modo da subjetividade, usado após verbos e expressões de opinião, dúvida, desejo, medo e emoção.</li>
+  <li>É quase sempre introduzido por <strong>che</strong>.</li>
+  <li>A conjugação regular é marcada pelas terminações <strong>-i, -a, -a</strong> para o singular, e <strong>-iamo, -iate, -ino/-ano</strong> para o plural.</li>
+  <li>As três pessoas do singular (<em>io, tu, lui/lei</em>) são <strong>idênticas</strong>.</li>
+  <li>Verbos essenciais como <em>essere, avere, andare, fare</em> são irregulares e precisam ser memorizados.</li>
+</ul>
+
+<!-- Desafio -->
+<h2>11. Desafio da Aula 🚀</h2>
+<p>Expresse seus sentimentos sobre o futuro. Escreva 3 frases, cada uma começando com uma expressão diferente que pede o subjuntivo. Exemplo: <em>"Spero che il prossimo anno sia migliore. Penso che troverò un buon lavoro. Ho paura che la situazione economica non migliori."</em>. <em>In bocca al lupo!</em></p>
+
+<!-- Gabarito -->
+<h2>12. Gabarito 📝</h2>
+<div class="gabarito-section">
+  <h4>Seção 5: Texto para Análise</h4>
+  <p>Resposta correta: <strong>B</strong> (Spera di tornare presto in Italia per rivedere i suoi amici.)</p>
+  <h4>Seção 6: Exercícios de Fixação</h4>
+  <ol>
+    <li>abbia</li>
+    <li>faccia</li>
+    <li>capiate</li>
+    <li>Credo che loro siano felici.</li>
+    <li>dica</li>
+    <li>sia</li>
+    <li>Ho paura che sia troppo tardi.</li>
+    <li>partiamo</li>
+    <li>vengano</li>
+    <li>È importante che voi gli parliate.</li>
+  </ol>
+</div>
+
+<!-- Script para tocar o áudio -->
+<script>
+    function playAudio(text) {
+      // Verifica se o navegador suporta a API
+      if ('speechSynthesis' in window) {
+        // Cancela qualquer áudio que esteja tocando
+        window.speechSynthesis.cancel();
+        
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'it-IT'; // Define o idioma para italiano
+        utterance.rate = 0.9; // Velocidade um pouco mais lenta para clareza
+        
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert("Desculpe, seu navegador não suporta a funcionalidade de áudio.");
+      }
+    }
+</script>
+
+</body>
+</html>
